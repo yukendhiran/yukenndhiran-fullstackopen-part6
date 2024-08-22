@@ -1,0 +1,39 @@
+{
+  "anecdotes": [
+    {
+      "votes": 7,
+      "content": "If it hurts, do it more often",
+      "id": "1"
+    },
+    {
+      "content": "state changes are made with actions",
+      "votes": 7,
+      "id": "2"
+    },
+    {
+      "id": "bb55",
+      "content": "this is new note",
+      "votes": 1
+    },
+    {
+      "id": "7aaf",
+      "content": "Finaly Understood but need to concentrate on reducers",
+      "votes": 1
+    },
+    {
+      "id": "8f27",
+      "content": "hi",
+      "votes": 9
+    },
+    {
+      "id": "31ea",
+      "content": "this is new note",
+      "votes": 0
+    },
+    {
+      "id": "7fee",
+      "content": "hi 0.1",
+      "votes": 3
+    }
+  ]
+}
