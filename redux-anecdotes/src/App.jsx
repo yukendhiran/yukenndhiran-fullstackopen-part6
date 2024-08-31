@@ -1,19 +1,20 @@
-import AnecdotesForm from "./components/AnecdotesForm";
-import AnecdotesList from "./components/AnecdotesList";
-import Filter from "./components/Filter";
-import Notification from "./components/Notification";
+import AnecdotesForm from './components/AnecdotesForm'
+import AnecdotesList from './components/AnecdotesList'
+import Filter from './components/Filter'
+import Notification from './components/Notification'
 
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux'
 
-import { useEffect } from "react";
-import { initializeAnecdotes } from "./reducers/anecdoteReducer";
+import { useEffect } from 'react'
+import { initializeAnecdotes } from './reducers/anecdoteReducer'
 
 const App = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(initializeAnecdotes());
-  }, []);
+    dispatch(initializeAnecdotes())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div>
@@ -24,7 +25,7 @@ const App = () => {
       <AnecdotesForm />
       <AnecdotesList />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

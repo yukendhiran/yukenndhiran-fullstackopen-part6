@@ -1,26 +1,26 @@
-import { useSelector, useDispatch } from "react-redux";
-import { vote, updateVotes } from "../reducers/anecdoteReducer";
+import { useSelector, useDispatch } from 'react-redux'
+import { updateVotes } from '../reducers/anecdoteReducer'
 
-import { setNotification } from "../reducers/notificationReducer";
+import { setNotification } from '../reducers/notificationReducer'
 const AnecdotesList = () => {
   const anecdotes = useSelector(({ filter, anecdotes }) => {
-    if (filter == " ") {
-      return anecdotes.sort((a, b) => b.votes - a.votes);
+    if (filter == ' ') {
+      return anecdotes.sort((a, b) => b.votes - a.votes)
     }
 
     return anecdotes
       .filter((anecdote) =>
         anecdote.content.toLowerCase().includes(filter.toLowerCase())
       )
-      .sort((a, b) => b.votes - a.votes);
-  });
+      .sort((a, b) => b.votes - a.votes)
+  })
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const voteId = (anecdote) => {
-    console.log(anecdote);
-    dispatch(updateVotes(anecdote.id));
-    dispatch(setNotification(` voted '${anecdote.content}'`), 5);
-  };
+    console.log(anecdote)
+    dispatch(updateVotes(anecdote.id))
+    dispatch(setNotification(` voted '${anecdote.content}'`), 5)
+  }
   return (
     <div>
       <h2>Anecdotes List</h2>
@@ -34,7 +34,7 @@ const AnecdotesList = () => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default AnecdotesList;
+export default AnecdotesList
